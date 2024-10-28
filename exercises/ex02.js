@@ -6,6 +6,22 @@ const Stack = require('../lib/Stack')
 
 function lowercaseStrings(stack) {
   // your code here
+  const tempStack = new Stack()
+
+  while(!stack.isEmpty()){
+    const curr = stack.pop()
+    // console.log(curr)
+    const array = curr.split('')
+    // console.log(array)
+    const lowercase = array.forEach(letter => {
+      const lowercase = letter.toLowerCase()
+      console.log(lowercase)
+      console.log(lowercase.split())
+      // console.log(lowercase.join())
+    })
+
+    
+  }
 }
 
 // Create stack
@@ -16,4 +32,4 @@ stack.push("good");
 stack.push("MORNING");
 
 lowercaseStrings(stack)
-console.log(stack.printStack()) // ["hello", "world", "good", "morning"]
+// console.log(stack.printStack()) // ["hello", "world", "good", "morning"]
